@@ -46,12 +46,12 @@ $(function () {
     });
 
     $('.nav_search_input').bind("focus", function () {
-        $(this).animate({width: "15%", marginLeft: "20%"}, 800);
+        $(this).animate({width: "10.5%", marginLeft: "20%"}, 800);
     });
 
     $('.nav_search_input').bind("blur", function () {
         if ($(this).val() == '')
-            $(this).animate({width: "5em", marginLeft: "25%"}, 800);
+            $(this).animate({width: "4em", marginLeft: "25%"}, 800);
     });
 
     $('.search_icon').click(function () {
@@ -90,21 +90,6 @@ $(function () {
     });
 });
 jQuery(document).ready(function ($) {
-    // if (window.history && window.history.pushState) {
-    //     $(window).on('popstate', function () {
-    //         var hashLocation = location.hash;
-    //         var hashSplit = hashLocation.split("#!/");
-    //         var hashName = hashSplit[1];
-    //         if (hashName !== '') {
-    //             var hash = window.location.hash;
-    //             if (hash === '') {
-    //                 // alert("Back button isn't supported. You are leaving this application on next clicking the back button");
-    //                 window.history.pushState('forward', null,'./?WSKandXYF=后退不了了吧，我故意设置的');
-    //             }
-    //         }
-    //     });
-    //     window.history.pushState('forward', '/?wsk','./?WSKandXYF='+new Date().getTime());
-    // }
     //监听关闭事件
     window.onbeforeunload =(function () {
         window.location.href='/logout.do';

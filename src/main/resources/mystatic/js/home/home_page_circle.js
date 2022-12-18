@@ -1,5 +1,5 @@
 /**
-  
+
  */
 $(function () {
     var time_out = setTimeout(moveToRight, 3500);
@@ -26,7 +26,7 @@ $(function () {
                 $(this).animate({left: -200, opacity: 0}, 500, function () {
                     $(this).hide(0);
                 });
-                $('.current .slide_img').animate({left: "70%"}, 300, function () {
+                $('.current .slide_img').animate({left: "40%"}, 800, function () {
                     $('.current .slide_img').animate({left: -200, opacity: 0}, 800, function () {
                         moveToNext();
                         $(this).hide(0);
@@ -61,13 +61,13 @@ $(function () {
         temp.css({opacity: 0}).show(0);
         temp.children("h1").css({left: "10%", opacity: 1}).show(0);
         temp.children("p").css({left: "10%", opacity: 1}).show(0);
-        temp.children(".slide_img").css({left: "60%", opacity: 1}).show(0);
+        temp.children(".slide_img").css({left: "-15%", opacity: 1}).show(0);
     }
 
     function currentMoveToLeft() {
         clearTimeout(time_out);
         prevPrepare();
-        $('.current .slide_img').animate({left: "41%"}, 400, function () {
+        $('.current .slide_img').animate({left: "41%"}, 800, function () {
             $('.current h1').animate({left: "15%"}, 400);
             $('.current p').animate({left: "0%"}, 400, function () {
                 $('.current h1').animate({left: "5%"}, 600, function () {
@@ -94,7 +94,7 @@ $(function () {
         temp.css({opacity: 0}).show(0);
         temp.children("h1").css({left: "10%", opacity: 1}).show(0);
         temp.children("p").css({left: "10%", opacity: 1}).show(0);
-        temp.children(".slide_img").css({left: "60%", opacity: 1}).show(0);
+        temp.children(".slide_img").css({left: "-15%", opacity: 1}).show(0);
     }
 
     function moveToPrev() {
@@ -132,35 +132,4 @@ $(function () {
         })
     });
 
-    // var host = window.location.host;
-    // var websocket = new WebSocket("ws://" + host + "/sockjs/webSocketIMServer");
-    // var phone = $('#user_name_a').attr('value');
-    // if (phone !== 'wsk') {
-    //     websocket.onopen = function () {
-    //         console.log("websocket连接上");
-    //         websocket.send("start");
-    //     };
-    //     websocket.onmessage = function (evnt) {
-    //         // console.log(evnt.data);
-    //         var result = evnt.data;
-    //         if (result == "error"){
-    //             window.location.href='/logout.do';
-    //             alert("该账号在其他地方登录了，请检查是否为本人操作，防止密码丢失！！！");
-    //             return;
-    //         }
-    //         setTimeout(function () {
-    //             messageHandle();
-    //         }, 2000);
-    //     };
-    //     websocket.onerror = function () {
-    //         console.log("websocket错误");
-    //     };
-    //     websocket.onclose = function () {
-    //         console.log("websocket关闭");
-    //     };
-    //     function messageHandle() {
-    //         // alert(phone);
-    //         websocket.send(phone);
-    //     };
-    // }
 });

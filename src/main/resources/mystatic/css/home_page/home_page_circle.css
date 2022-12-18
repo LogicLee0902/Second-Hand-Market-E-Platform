@@ -2,10 +2,10 @@
     top: 23%;
     left: 4%;
     width: 92%;
-    height: 480px;
+    height: 700px;
     position: absolute;
     overflow: hidden;
-    background-color: rebeccapurple;
+    background-color: #ffffff;
     box-shadow: 5px 5px 10px #888888;;
     display: block;
     border-radius: 10px;
@@ -40,8 +40,8 @@
 
 .slide_img {
     position: absolute;
-    left: 50%;
-    top: 25%;
+    left: -15%;
+    top: 0%;
     width: 60%;
 }
 
@@ -50,7 +50,7 @@
     left: 5%;
     top: 50%;
     width: 50px;
-    height: 90px;
+    height: 50px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -60,8 +60,8 @@
     left: 8px;
     top: 5px;
     width: 34px;
-    height: 80px;
-    background-image: url("../../img/home/arrows.png");
+    height: 40px;
+    background-image: url("../../img/home/narArrows.png");
     background-repeat: no-repeat;
     cursor: pointer;
 }
@@ -71,7 +71,7 @@
     left: 92%;
     top: 50%;
     width: 50px;
-    height: 90px;
+    height: 50px;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -81,8 +81,8 @@
     left: 8px;
     top: 5px;
     width: 34px;
-    height: 80px;
-    background-image: url("../../img/home/arrows.png");
+    height: 40px;
+    background-image: url("../../img/home/narArrows.png");
     background-repeat: no-repeat;
     background-position: -34px 0;
     cursor: pointer;
@@ -100,7 +100,7 @@
 }
 
 .product_name:hover {
-    color: slateblue;
+    color: #8b8a8f;
 }
 
 .product {

@@ -1,7 +1,7 @@
 header {
     width: 99%;
     max-height: 80px;
-    background-color: blueviolet;
+    background-color: #000000;
     box-shadow: 5px 5px 10px #888888;
     position: fixed;
     margin-top: -10px;
@@ -32,27 +32,27 @@ span.short_nav:hover, span.search_icon:hover,
 }
 
 header .home_icon {
-    width: 5%;
+    width: 15%;
     height: 80%;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1%;
     float: left;
-    margin-left: 7%;
+    margin-left: 3%;
     color: white;
     font-weight: 100;
-    font-family: cursive;
+    font-family: Microsoft YaHei;
 }
 
 header .login_or_register_string {
-    font-size: 1.3em;
+    font-size: 1.1em;
     padding: 1%;
     float: left;
     color: black;
     font-weight: 100;
     margin-top: 0.5%;
-    font-family: cursive;
+    font-family: Microsoft YaHei, cursive;
     width: 6em;
-    height: 0.55em;
+    height: 0.50em;
     display: inline;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -81,8 +81,8 @@ header .search_icon {
 
 header .user_icon {
     float: left;
-    background-color: white;
-    background-image: url("../../img/home/user_icon.png");
+    /*background-color: white;*/
+    /*background-image: url("../../img/home/user_icon.png");*/
     background-repeat: no-repeat;
     background-position: center;
     width: 2.5em;
@@ -98,13 +98,13 @@ header .user_icon {
 .nav_search_input {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    width: 5em;
+    width: 4em;
     background-color: transparent;
     font-size: 1.3em;
     color: white;
-    margin-top: 1.2%;
+    margin-top: 1.0%;
     margin-left: 25%;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Microsoft YaHei, "Trebuchet MS", Arial, Helvetica, sans-serif;
     display: block;
     float: left;
     border-radius: 10px;
@@ -128,7 +128,7 @@ nav.my_nav {
 }
 
 nav.my_nav ul {
-    color: slateblue;
+    color: #908bab;
     list-style: none;
     padding: 0;
     margin: 0;
