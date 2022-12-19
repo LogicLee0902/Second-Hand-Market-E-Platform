@@ -107,6 +107,12 @@
             <artifactId>commons-email</artifactId>
             <version>1.4</version>
         </dependency>
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <version>2.6.7</version>
+        </dependency>-->
     </dependencies>
     <build>
         <finalName>ROOT</finalName>
