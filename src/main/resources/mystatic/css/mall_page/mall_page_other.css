@@ -6,7 +6,7 @@
     margin-top: 15%;
     margin-left: 5%;
     float: left;
-    background-color: white;
+    background-color: #e7e7e7;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     border-radius: 5px;
@@ -29,7 +29,7 @@
 }
 
 .particular_type_div {
-    background-color: white;
+    background-color: #eaeaea;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 40%;
@@ -55,10 +55,10 @@
 .one_part .type_border_span {
     float: left;
     margin-left: 8%;
-    margin-top: 8%;
-    margin-right: 8%;
-    background-color: blueviolet;
-    color: blueviolet;
+    margin-top: 2%;
+    margin-right: 4%;
+    background-color: #7ab8de;
+    color: #7ab8de;
 }
 
 .type_title_div h3 {
@@ -92,22 +92,22 @@
 .product_content_div {
     width: 75%;
     margin-top: 3%;
-    margin-left: 25%;
+    margin-left: 20%;
     display: block;
     z-index: 25;
 }
 
 .detail_product {
     width: 19%;
-    height: 425px;
+    height: 350px;
     float: left;
-    margin: 5% 5%;
-    background-color: white;
+    margin: 1% 1%;
+    background-color: #f3f3f3;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     padding: 2%;
     text-align: center;
-    line-height: 3em;
+    line-height: 2em;
     /*z-index: 1000;*/
 }
 
@@ -126,7 +126,7 @@
     display: inline-block;
     overflow-x: hidden;
     cursor: pointer;
-    margin-top: 2em;
+    margin-top: 2.8em;
 }
 
 .detail_product .detail_product_name:hover {
@@ -134,8 +134,8 @@
 }
 
 .detail_product .detail_product_cost {
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 1.8em;
+    color: rgba(255, 0, 0, 0.85);
+    font-size: 1.5em;
     display: inline-block;
     overflow-x: hidden;
 }

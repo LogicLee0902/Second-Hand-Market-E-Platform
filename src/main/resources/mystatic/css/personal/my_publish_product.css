@@ -46,8 +46,8 @@
 }
 
 .detail_product .detail_product_cost {
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 1.8em;
+    color: rgba(255, 0, 0, 0.85);
+    font-size: 1.5em;
     display: inline-block;
     overflow-x: hidden;
 }
