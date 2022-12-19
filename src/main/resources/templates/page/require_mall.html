@@ -77,8 +77,8 @@
             margin-left: 8%;
             margin-top: 8%;
             margin-right: 8%;
-            background-color: blueviolet;
-            color: blueviolet;
+            background-color: #7ab8de;
+            color: #7ab8de;
         }
 
         .type_title_div h3 {
@@ -122,7 +122,7 @@
             width: 23%;
             float: left;
             margin: 5% 2%;
-            background-color: white;
+            background-color: #aae1df;
             box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
             border-radius: 5px;
             padding: 2%;
@@ -165,7 +165,7 @@
         .pagination_div .pagination_gt {
             width: 6%;
             height: 36px;
-            background-color: white;
+            background-color: #c5c3c3;
             margin-left: 4%;
             font-size: 1.5em;
             color: rgba(0, 0, 0, 0.54);
@@ -185,12 +185,12 @@
         .pagination_div .pagination_lt:hover, .pagination_div ul li:hover,
         .pagination_div .pagination_gt:hover {
             cursor: pointer;
-            background-color: slateblue;
+            background-color: rgba(104, 153, 51, 0.73);
         }
 
         footer {
             width: 96%;
-            background-color: slateblue;
+            background-color: #9b94c5;
             box-shadow: 4px 2px 10px #888888;
             border-radius: 10px;
             height: 80px;
@@ -216,7 +216,7 @@
 
         /*new*/
         .pagination_div li.current_page {
-            background-color: slateblue;
+            background-color: rgba(51, 133, 153, 0.81);
         }
     </style>
 </head>
@@ -251,7 +251,7 @@
             <span class="what_info">数量：</span>
             <span class="info_content" th:text="${o.quantity}">3</span><br/>
             <span class="what_info">单价：</span>
-            <span class="info_content" th:text="'￥'+${o.price}+'元'">20.00</span><br/>
+            <span class="info_content" th:text="'￥'+${o.price}+''">20.00</span><br/>
             <span class="what_info" style="float: left">详情：</span>
 
             <textarea readonly="readonly" class="info_content" style="resize: none;width: 250px;height: 100px"
@@ -274,7 +274,7 @@
         <a class="pagination_gt">&gt;</a>
     </div>
     <footer>
-        <p>Copyright © 2017.Company name All rights reserved.<a href="/"></a></p>
+        <p>Copyright © 2022-2200. All rights reserved.<a href="/"></a></p>
     </footer>
 </div>
 </body>
