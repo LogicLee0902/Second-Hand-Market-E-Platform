@@ -6,7 +6,7 @@
     left: 4%;
     top: 120%;
     display: inline;
-    background-color: white;
+    background-color: #e0e0e0;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
 }
@@ -30,6 +30,7 @@
     border-radius: 0px;
     padding: 1em;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
 
 .featured_products .product .product_img_div {
@@ -78,7 +79,7 @@
     top: 190%;
     left: 5%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 .home_page_info .bottom_info {
@@ -104,7 +105,7 @@ footer {
     top: 230%;
     background-color: #726f88;
     box-shadow: 2px 2px 10px #888888;
-    border-radius: 10px;
+    border-radius: 1px;
 }
 
 footer p {

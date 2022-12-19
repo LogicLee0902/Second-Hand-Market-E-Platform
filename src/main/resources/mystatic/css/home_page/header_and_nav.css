@@ -65,12 +65,12 @@ header .login_or_register_string {
 
 header .search_icon {
     float: left;
-    background-color: white;
+    background-color: #dadada;
     background-image: url("../../img/home/search_icon.png");
     background-repeat: no-repeat;
     background-position: center;
-    width: 2.5em;
-    padding-top: 2.5em;
+    width: 2.0em;
+    padding-top: 2.0em;
     margin-top: 1.1%;
     margin-left: 1%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -98,16 +98,16 @@ header .user_icon {
 .nav_search_input {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    width: 4em;
+    width: 13em;
     background-color: transparent;
-    font-size: 1.3em;
+    font-size: 1.0em;
     color: white;
-    margin-top: 1.0%;
-    margin-left: 25%;
+    margin-top: 1.1%;
+    margin-left: 15%;
     font-family: Microsoft YaHei, "Trebuchet MS", Arial, Helvetica, sans-serif;
     display: block;
     float: left;
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 0.3em;
 }
 .nav_search_input:focus,.nav_search_input:active {
@@ -146,7 +146,7 @@ nav.my_nav ul li {
 nav.my_nav ul li a{
     text-decoration: none;
     font-size: 1em;
-    color: slateblue;
+    color: #726f88;
 }
 nav.my_nav ul li:last-child {
     border-right: none;
@@ -197,7 +197,7 @@ nav.my_nav ul li:last-child {
     margin-left: 85%;
     width: 10%;
     /*height: 23%;*/
-    border-radius: 10px;
+    border-radius: 1px;
     z-index: 30;
     background-color: white;
     margin-top: 3.8%;
@@ -208,7 +208,7 @@ nav.my_nav ul li:last-child {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.0em;
     text-align: center;
     margin-top: 10%;
 }
@@ -216,20 +216,20 @@ nav.my_nav ul li:last-child {
     margin-bottom: 10%;
     margin-left: 5%;
     margin-right: 5%;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .personal_nav ul li:last-child {
     border-bottom: none;
 }
 .personal_nav ul li a {
-    text-decoration: none;
+    text-decoration: skyblue;
     color: rgba(0, 0, 0, 0.75);
     font-size: 1em;
 }
 .personal_nav ul li:hover {
     cursor: pointer;
-    background-color: slateblue;
+    background-color: lightgoldenrodyellow;
 }
 

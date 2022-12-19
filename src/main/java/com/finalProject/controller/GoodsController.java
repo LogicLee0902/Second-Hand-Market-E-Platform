@@ -113,6 +113,11 @@ public class GoodsController {
         return "page/mall_page";
     }
 
+    @RequestMapping(value = "/ourInfo.do")
+    public String ourInfo(HttpServletRequest request, Model model) {
+        return "page/ourInfo";
+    }
+
     //进入查看商品详情
     @RequestMapping(value = "/selectById.do")
     public String selectById(@RequestParam int id,

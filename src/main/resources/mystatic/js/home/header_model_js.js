@@ -45,14 +45,14 @@ $(function () {
         }
     });
 
-    $('.nav_search_input').bind("focus", function () {
-        $(this).animate({width: "10.5%", marginLeft: "20%"}, 800);
-    });
+    // $('.nav_search_input').bind("focus", function () {
+    //     $(this).animate({width: "10.5%", marginLeft: "20%"}, 800);
+    // });
 
-    $('.nav_search_input').bind("blur", function () {
-        if ($(this).val() == '')
-            $(this).animate({width: "4em", marginLeft: "25%"}, 800);
-    });
+    // $('.nav_search_input').bind("blur", function () {
+    //     if ($(this).val() == '')
+    //         $(this).animate({width: "4em", marginLeft: "25%"}, 800);
+    // });
 
     $('.search_icon').click(function () {
 
