@@ -65,7 +65,7 @@
     </div>
 </div>
 <div class="featured_products">
-    <h2>精选的商品</h2>
+    <h2>精选商品</h2>
     <figure class="product" th:each="o:${shopInformationBean}">
         <div class="product_img_div">
             <img src="/img/home/feature_prodects/cont1.jpg" class="show_img" th:src="${o.image}"/>
@@ -74,7 +74,7 @@
         <input class="product_id" type="hidden" th:value="${o.id}"/>
         <a class="product_name" th:href="'/selectById.do?id='+${o.id}" th:text="${o.name}" th:title="${o.name}">wsk1103</a><br/>
         <!--<span class="product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>-->
-        <span class="product_cost" th:text="'￥'+${o.price}+'元'">$350.00</span><br/><br/>
+        <span class="product_cost" th:text="'￥'+${o.price}+''">$350.00</span><br/><br/>
         <span class="buy product_1" th:value="${o.id}">加入购物车</span>
     </figure>
 </div>
