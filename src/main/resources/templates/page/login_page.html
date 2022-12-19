@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="/css/login_and_register/forget_password.css"/>
 </head>
 <body>
+<header class="copy" th:fragment="copy">
+    <span class="short_nav"></span>
+    <div class="home_icon">
+        <a href="/" style="text-decoration: none;color: white;font-size: 1.5em;padding-top: 10px;">C2C Second-Hand</a>
+    </div>
+</header>
 <!--顶级的content是用来充当3D旋转的容器-->
 <div class=".stage">
     <div class="content">
@@ -33,7 +39,9 @@
                             <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8"></path>
                         </svg>
                         <input type="hidden" th:value="${token}" class="token" name="token"/>
-                        <input type="text" placeholder="手机号码" class="input_username placeholder" name="phone"/>
+                        <label>
+                            <input type="text" placeholder="手机号码" class="input_username placeholder" name="phone"/>
+                        </label>
                     </div>
                     <div class="login_password">
                         <svg class="password_icon" viewBox="0 0 20 20">
@@ -50,7 +58,7 @@
                         <button class="login_button">登录</button>
                     </div>
                     <div class="register_info">
-                        <span style="color: #000;">还没有账号 ? <a class="flip_to_register" href="#">注册</a></span>
+                        <span style="color: #ffffff;">还没有账号 ? <a class="flip_to_register" href="#">注册</a></span>
                     </div>
 
 
@@ -67,7 +75,9 @@
             <div class="get_vcode">
                 <div class="nickname_div">
                     <span class="n_span">N</span>
-                    <input class="input_nickname  placeholder" type="text" placeholder="用户名"/>
+                    <label>
+                        <input class="input_nickname  placeholder" type="text" placeholder="用户名"/>
+                    </label>
                 </div>
                 <div class="register_phone_div">
                     <!--svg就很溜-->

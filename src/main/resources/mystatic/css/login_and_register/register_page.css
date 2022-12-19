@@ -146,3 +146,13 @@ div.go_back_login_div a.go_back_login{
     color: white;
     text-decoration: none;
 }
+
+.go_back_login_div a.go_back_login:hover {
+    color: #4789cd;
+    text-decoration: none;
+}
+
+.go_back_login_div:hover {
+    color: #4789cd;
+    text-decoration: none;
+}
