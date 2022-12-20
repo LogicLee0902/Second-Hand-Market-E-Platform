@@ -1,0 +1,150 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="1075199251,张凯,18772383543,wuwii,追光者w,有梦想的咸鱼,一棵树站在原野上,Slience">
+    <link rel="icon" href="http://blog.wuwii.com/images/favicon.ico?v=5.1.1" type="image/x-icon">
+    <title>关于我们</title>
+<!--    <link rel="stylesheet" type="text/css" href="js/ourInfo.css"/>-->
+    <script th:src="@{/js/ourInfo.js}"></script>
+    <link th:href="@{/css/ourInfo.css}" rel="stylesheet"/>
+
+</head>
+
+<body>
+<div class="vi">
+    <div class="sidebar">
+        <div class="header">
+            <h1>关于我们</h1>
+            <div class="quote">
+                <p class="quote-text animate-init">
+                    <span class="animate-init">Good,</span>
+                    <span class="animate-init"> Swift,</span>
+                    <span class="animate-init">Worthy.</span>
+                    <span class="animate-init"> No regrets.</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="bottom_info">
+            <h2>
+                关于我们
+            </h2>
+            <p>
+                这是一个可以解决你无处安放闲置物品苦恼的网站。无需注册店铺就能卖闲置：为家里狗狗的幼崽找新主，旅游带回的特色小商品分享给其他驴友，把不再喜爱的玩具送给别家小朋友……本网站不只有交易，有着共同爱好、趣味相投的人们正集结起来。
+            </p>
+        </div>
+
+        <div class="bottom_info">
+            <h2>
+                团队信息
+            </h2>
+            <p>网页设计由GXY,LS协力完成, 后端数据库由DJX设计完成。
+            </p>
+        </div>
+
+        <div class="menu">
+            <p><a href="/home.do" class="animate-init" rel="noopener noreferrer">Main Menu</a></p>
+<!--            <p><a href="/" class="animate-init" rel="external nofollow noopener noreferrer">Github</a></p>-->
+<!--            <p><a href="/" class="animate-init" rel="external nofollow noopener noreferrer">Email</a></p>-->
+        </div>
+
+        <div class="location">
+            <i class="location-icon"></i>
+            <span class="location-text animate-init">Beihang University, Beijing, China</span>
+        </div>
+        <div class="relocating">
+            Navigating to: <span class="relocate-location"></span>...
+        </div>
+    </div>
+
+    <div class="content">
+        <span class="close">close</span>
+    </div>
+</div>
+<canvas width="1920" height="949"></canvas>
+<script type="text/javascript" src="../../mystatic/js/ourInfo.js/ourInfo.js"></script>
+<script>
+    $(document).ready(function () {
+        var delay = 1;
+        var DELAY_STEP = 200;
+        var animationOptions = { opacity: 1, top: 0};
+
+        $('h1').animate(animationOptions).promise()
+            .pipe(animateMain)
+            .pipe(animateLocationIcon);
+
+        function animateMain() {
+            var dfd = $.Deferred();
+            var els = $('.animate-init');
+            var size = els.size();
+
+            els.each(function (index, el) {
+                delay++;
+                $(el).delay(index * DELAY_STEP)
+                    .animate(animationOptions);
+                (size - 1 === index) && dfd.resolve();
+            });
+            return dfd.promise();
+        }
+
+        function animateLocationIcon() {
+            $('.location-icon').delay(delay * DELAY_STEP).animate({
+                opacity: 1,
+                top: 0
+            }).promise().done(animationQuote);
+        }
+
+        function animationQuote() {}
+    });
+
+    document.addEventListener('touchmove', function (e) {
+        e.preventDefault()
+    })
+    var c = document.getElementsByTagName('canvas')[0],
+        x = c.getContext('2d'),
+        pr = window.devicePixelRatio || 1,
+        w = window.innerWidth,
+        h = window.innerHeight,
+        f = 90,
+        q,
+        m = Math,
+        r = 0,
+        u = m.PI*2,
+        v = m.cos,
+        z = m.random
+    c.width = w*pr
+    c.height = h*pr
+    x.scale(pr, pr)
+    x.globalAlpha = 0.6
+    function i(){
+        x.clearRect(0,0,w,h)
+        q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
+        while(q[1].x<w+f) d(q[0], q[1])
+    }
+    function d(i,j){
+        x.beginPath()
+        x.moveTo(i.x, i.y)
+        x.lineTo(j.x, j.y)
+        var k = j.x + (z()*2-0.25)*f,
+            n = y(j.y)
+        x.lineTo(k, n)
+        x.closePath()
+        r-=u/-50
+        x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
+        x.fill()
+        q[0] = q[1]
+        q[1] = {x:k,y:n}
+    }
+    function y(p){
+        var t = p + (z()*2-1.1)*f
+        return (t>h||t<0) ? y(p) : t
+    }
+    document.onclick = i
+    document.ontouchstart = i
+    i()
+</script>
+</body>
+</html>
