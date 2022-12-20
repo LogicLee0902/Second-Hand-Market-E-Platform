@@ -46,7 +46,7 @@
                     <img src="/img/home/feature_prodects/cont1.jpg" th:src="${o.image}" th:value="${o.sid}"
                          th:title="${o.name}"/></td>
                 <td class="title" colspan="2"><span th:text="${o.name}">这是一个商品</span></td>
-                <td class="cost">￥<span th:text="${o.price}">20.00</span>元</td>
+                <td class="cost">￥<span th:text="${o.price}">20.00</span></td>
                 <td class="count"><span class="minus">-</span><span class="number" th:text="${o.quantity}">2</span><span class="add">+</span>
                 </td>
                 <td class="per_sum">￥<span th:with="sum=${o.price}*${o.quantity}" th:text="${sum}">40.00</span>元</td>
@@ -86,7 +86,7 @@
             <tr class="end_pay">
                 <td class="is_all"><input id="all" type="checkbox" checked="checked"/>全选</td>
                 <td class="space" colspan="3"></td>
-                <td colspan="2" class="all_sum">总价：￥<span>500.00</span>元</td>
+                <td colspan="2" class="all_sum">总价：￥<span>500.00</span></td>
                 <td colspan="3" class="pay_button_div">
                     <button class="pay_button">结算</button>
                 </td>

@@ -20,26 +20,63 @@
         <div class="product_img_div">
             <img src="/img/home/p4.jpeg" class="product_img" th:src="${shopInformation.image}"/>
         </div>
-        <div class="product_info_div">
-            <span class="what_info">商品名：</span>
-            <input type="hidden" th:value="${shopInformation.id}" class="id"/>
-            <span class="info_content" th:text="${shopInformation.name}">苹果6s</span><br/>
-            <span class="what_info">成色：</span>
-            <span class="info_content" th:text="${shopInformation.level}+'成'">7成</span><br/>
-            <span class="what_info">数量：</span>
-            <span class="info_content" th:text="${shopInformation.quantity}">3</span><br/>
-            <span class="what_info">单价：</span>
-            <span class="info_content" th:text="'$'+${shopInformation.price}">20.00</span><br/>
-            <span class="what_info">详情：</span>
-            <span class="info_content" th:text="${shopInformation.remark}">这是一个商品，联系电话1111111111</span><br/>
-            <span class="what_info">分类：</span>
-            <span class="info_content" th:text="${sort}">数码科技-手机-苹果</span><br/>
-            <button class="buy_button" th:value="${shopInformation.id}">加入购物车</button>
+
+        <div id="main-right">
+            <div class="right-top">
+                <div class="detail">
+                    <h3>
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <span class="info_content" th:text="${shopInformation.name}"></span><br/>
+                    </h3>
+                    <div class="p-body">
+                        <span class="what_info">成色：</span>
+                        <span class="info_content" th:text="${shopInformation.level}+'成'">7成</span><br/>
+                        <span class="what_info">数量：</span>
+                        <span class="info_content" th:text="${shopInformation.quantity}">3</span><br/>
+                        <span class="what_info">详情：</span>
+                        <span class="info_content" th:text="${shopInformation.remark}">这是一个商品，联系电话1111111111</span><br/>
+                        <span class="what_info">分类：</span>
+                        <span class="info_content" th:text="${sort}">数码科技-手机-苹果</span><br/>
+                    </div>
+
+                </div>
+                <div class="add">
+                    <span class="off">50% Off!</span>
+                    <h4>
+                        <span class="info_content" th:text="'￥'+${shopInformation.price}">20.00</span><br/>
+                    </h4>
+
+                    <p class="btn-title">数量</p>
+                    <input type="text" value="1">
+
+                    <button class="buy_button" th:value="${shopInformation.id}">加入购物车</button>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+
         </div>
+
+<!--        <div class="product_info_div">-->
+<!--            <span class="what_info">商品名：</span>-->
+<!--            <input type="hidden" th:value="${shopInformation.id}" class="id"/>-->
+<!--            <span class="info_content" th:text="${shopInformation.name}">苹果6s</span><br/>-->
+<!--            <span class="what_info">成色：</span>-->
+<!--            <span class="info_content" th:text="${shopInformation.level}+'成'">7成</span><br/>-->
+<!--            <span class="what_info">数量：</span>-->
+<!--            <span class="info_content" th:text="${shopInformation.quantity}">3</span><br/>-->
+<!--            <span class="what_info">单价：</span>-->
+<!--            <span class="info_content" th:text="'$'+${shopInformation.price}">20.00</span><br/>-->
+<!--            <span class="what_info">详情：</span>-->
+<!--            <span class="info_content" th:text="${shopInformation.remark}">这是一个商品，联系电话1111111111</span><br/>-->
+<!--            <span class="what_info">分类：</span>-->
+<!--            <span class="info_content" th:text="${sort}">数码科技-手机-苹果</span><br/>-->
+<!--            <button class="buy_button" th:value="${shopInformation.id}">加入购物车</button>-->
+<!--        </div>-->
         <div class="publish_comment">
             <span>留言：</span><br/><br/>
             <input type="hidden" th:value="${token}" class="token"/>
-            <textarea class="comment_textarea" maxlength="122" placeholder="本次最多填写122个字" name="comment"></textarea>
+            <textarea class="comment_textarea" maxlength="100" placeholder="最多填写100个字" name="comment"></textarea>
             <button class="send_comment_button">发表</button>
         </div>
         <div class="comment_content">
