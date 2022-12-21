@@ -67,34 +67,43 @@
 <div class="featured_products">
     <h2>精选商品</h2>
     <figure class="product" th:each="o:${shopInformationBean}">
-        <div class="product_img_div">
-            <img src="/img/home/feature_prodects/cont1.jpg" class="show_img" th:src="${o.image}"/>
+        <div id="product-list">
+            <ul class="fall-list">
+                <li>
+                                <span class="p-price">
+                                    <span class="detail_product_cost" th:text="'￥'+${o.price}+''">￥350.00元</span><br/>
+                                </span>
+                    <a href="#" class="product-img">
+                        <div class="product_img_div">
+                            <img src="/img/home/feature_prodects/cont2.jpg" th:src="${o.image}" th:title="${o.name}" class="show_img"/>
+                        </div>
+                    </a>
+                    <div class="product-box">
+                        <!--                                    <p class="show_tip" th:text="${o.remark}"></p>-->
+                        <h3>
+                            <span class="detail_product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>
+                        </h3>
+                        <div class="btn-box">
+                            <a href="#" class="glyphicon glyphicon-shopping-cart"><span>
+                                            <span class="detail_buy product_1" th:value="${o.id}">加入购物车</span>
+                                        </span></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <p class="show_tip" th:text="${o.remark}"></p>
-        <input class="product_id" type="hidden" th:value="${o.id}"/>
-        <a class="product_name" th:href="'/selectById.do?id='+${o.id}" th:text="${o.name}" th:title="${o.name}">wsk1103</a><br/>
-        <!--<span class="product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>-->
-        <span class="product_cost" th:text="'￥'+${o.price}+''">$350.00</span><br/><br/>
-        <span class="buy product_1" th:value="${o.id}">加入购物车</span>
+<!--        <div class="product_img_div">-->
+<!--            <img src="/img/home/feature_prodects/cont1.jpg" class="show_img" th:src="${o.image}"/>-->
+<!--        </div>-->
+<!--        <p class="show_tip" th:text="${o.remark}"></p>-->
+<!--        <input class="product_id" type="hidden" th:value="${o.id}"/>-->
+<!--        <a class="product_name" th:href="'/selectById.do?id='+${o.id}" th:text="${o.name}" th:title="${o.name}">wsk1103</a><br/>-->
+<!--        &lt;!&ndash;<span class="product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>&ndash;&gt;-->
+<!--        <span class="product_cost" th:text="'￥'+${o.price}+''">$350.00</span><br/><br/>-->
+<!--        <span class="buy product_1" th:value="${o.id}">加入购物车</span>-->
     </figure>
 </div>
-<!--<div class="home_page_info">-->
-<!--    <div class="bottom_info">-->
-<!--        <h2>-->
-<!--            关于我们-->
-<!--        </h2>-->
-<!--        <p>-->
-<!--            这是一个可以解决你无处安放闲置物品苦恼的网站。无需注册店铺就能卖闲置：为家里狗狗的幼崽找新主，旅游带回的特色小商品分享给其他驴友，把不再喜爱的玩具送给别家小朋友……本网站不只有交易，有着共同爱好、趣味相投的人们正集结起来。-->
-<!--        </p>-->
-<!--    </div>-->
-<!--    <div class="bottom_info">-->
-<!--        <h2>-->
-<!--            团队信息-->
-<!--        </h2>-->
-<!--        <p>该网页由GXY,LS协力完成, 后端数据库由DJX设计完成。-->
-<!--        </p>-->
-<!--    </div>-->
-<!--</div>-->
+
 <footer>
     <p>Copyright © 2022-2200. All rights reserved.<a href="/"></a></p>
 </footer>

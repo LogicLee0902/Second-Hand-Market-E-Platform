@@ -138,6 +138,13 @@
             font-size: 1.1em;
         }
 
+        .info_content1 {
+            font-family: "Microsoft YaHei", 'SimSun',serif;
+            text-indent: 2em;
+            font-size: 0.8em;
+            background-color: rgba(213,214,212,0.81);
+        }
+
         div.pagination_div {
             display: block;
             width: 40%;
@@ -214,6 +221,134 @@
             font-size: 1.2em;
         }
 
+        /*product-list 开始*/
+        #product-list{
+            float: left;
+
+        }
+        #product-list li{
+            background: #f4f4f4;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        #product-list .p-price{
+            position: absolute;
+            right: -30px;
+            top: 13px;
+            color: #fff;
+            background: #609450;
+            width: 120px;
+            height: 34px;
+            line-height: 34px;
+            font-weight: bold;
+            text-align: center;
+            -webkit-transform:rotate(45deg);
+        }
+        #product-list .fall-list{
+            width: 90%;
+            float: left;
+            margin: 5% 2%;
+            background-color: #aae1df;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            padding: 2%;
+            line-height: 2.7em;
+            text-align: left;
+            /*width: 59%;*/
+            /*float: left;*/
+            /*margin-right: 25px;*/
+            /*vertical-align: middle;*/
+            /*height: 200px;*/
+        }
+        #product-list .fall-list:last-child{
+            margin-right: 0;
+        }
+        #product-list .product-img{
+            width: 222px;
+
+        }
+        #product-list .product-img img{
+            width: 100%;
+            height: 500px;
+        }
+        #product-list .product-box{
+            padding: 15px;
+            overflow: hidden;
+
+        }
+        #product-list .product-box h3{
+            font-weight: bold;
+            margin-bottom: 5px;
+
+        }
+        #product-list .product-box p{
+            line-height: normal;
+            margin-bottom: 5px;
+        }
+        #product-list .glyphicon-heart{
+            background: #424242;
+            color: #fff;
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            text-align: center;
+            float: left;
+            position: relative;
+        }
+        #product-list .glyphicon-heart:hover .wash{
+            display: block;
+        }
+        #product-list .wash{
+            background: #e86555;
+            color: #fff;
+            padding: 5px;
+            line-height: 20px;
+            position: absolute;
+            left:0;
+            top:-35px;
+            display: none;
+        }
+        #product-list .wash:after{
+            content: '';
+            border: 5px solid transparent;
+            border-top:5px solid #e86555;
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: -9px;
+            left:50%;
+            margin-left: -5px;
+        }
+        #product-list .glyphicon-shopping-cart{
+            display: inline-block;
+            color: #fff;
+            padding: 5px 12px;
+            float: left;
+            font-size: 14px;
+            background:#609450;
+            height: 20px;
+            line-height: 20px;
+        }
+        #product-list .glyphicon-shopping-cart span{
+            margin-left: 3px;
+        }
+
+        #product-list .glyphicon-eye-open{
+            background: #e7e7e7;
+            color: #000;
+            width: 39px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            float: right;
+        }
+
+        /*product-list 结束*/
+
         /*new*/
         .pagination_div li.current_page {
             background-color: rgba(51, 133, 153, 0.81);
@@ -245,20 +380,53 @@
 <div class="temp_content" onmousedown="hideParticular()">
     <!--注意需要加一个br，不然会在同一行显示-->
     <div class="require_content_div">
-        <div class="require_one_part" id="1" th:each="o:${list}">
-            <span class="what_info">商品名：</span>
-            <span class="info_content" th:text="${o.name}">苹果6s</span><br/>
-            <span class="what_info">数量：</span>
-            <span class="info_content" th:text="${o.quantity}">3</span><br/>
-            <span class="what_info">单价：</span>
-            <span class="info_content" th:text="'￥'+${o.price}+''">20.00</span><br/>
-            <span class="what_info" style="float: left">详情：</span>
+        <div class="require_one_par" id="1" th:each="o:${list}">
+            <div id="product-list">
+                <ul class="fall-list">
+                    <li>
+                                <span class="p-price">
+                                    <span class="detail_product_cost" th:text="'￥'+${o.price}+''">￥350.00元</span><br/>
+                                </span>
+                        <a href="#" class="product-img">
+                            <div class="product_img_div">
 
-            <textarea readonly="readonly" class="info_content" style="resize: none;width: 250px;height: 100px"
-                      th:text="${o.remark}">这是一哈哈哈哈哈哈哈哈哈打撒打撒个商品，联系电话1111111111</textarea><br/>
+                            </div>
+                        </a>
+                        <div class="product-box">
+                            <!--                                    <p class="show_tip" th:text="${o.remark}"></p>-->
+                            <h3>
+                                <span class="detail_product_name" th:text="${o.name}" th:value="${o.id}">Big block Lether Bag</span><br/>
+                            </h3>
+                            <span class="what_info">数量：</span>
+                            <span class="info_content" th:text="${o.quantity}">3</span><br/>
+                            <span class="what_info">单价：</span>
+                            <span class="info_content" th:text="'￥'+${o.price}+''">20.00</span><br/>
+                            <span class="what_info" style="float: left">详情：</span>
 
-            <span class="what_info">分类：</span>
-            <span class="info_content" th:text="${o.sort}">数码科技-手机-苹果</span><br/>
+                            <textarea readonly="readonly" class="info_content1" style="resize: none;width: 250px;height: 100px"
+                                      th:text="${o.remark}">这是一哈哈哈哈哈哈哈哈哈打撒打撒个商品，联系电话1111111111</textarea><br/>
+
+                            <span class="what_info">分类：</span>
+                            <span class="info_content" th:text="${o.sort}">数码科技-手机-苹果</span><br/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+<!--            <span class="what_info">商品名：</span>-->
+<!--            <span class="info_content" th:text="${o.name}">苹果6s</span><br/>-->
+<!--            <span class="what_info">数量：</span>-->
+<!--            <span class="info_content" th:text="${o.quantity}">3</span><br/>-->
+<!--            <span class="what_info">单价：</span>-->
+<!--            <span class="info_content" th:text="'￥'+${o.price}+''">20.00</span><br/>-->
+<!--            <span class="what_info" style="float: left">详情：</span>-->
+
+<!--            <textarea readonly="readonly" class="info_content1" style="resize: none;width: 250px;height: 100px"-->
+<!--                      th:text="${o.remark}">这是一哈哈哈哈哈哈哈哈哈打撒打撒个商品，联系电话1111111111</textarea><br/>-->
+
+<!--            <span class="what_info">分类：</span>-->
+<!--            <span class="info_content" th:text="${o.sort}">数码科技-手机-苹果</span><br/>-->
         </div>
     </div>
     <div class="pagination_div" onmouseleave="hideParticular()">

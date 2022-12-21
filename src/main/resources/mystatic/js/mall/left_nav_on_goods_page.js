@@ -67,16 +67,48 @@ $(function () {
                                 "</div>");
                         }
                         for (var i = 0; i < data.length; i++) {
+                            // $all_product.append("<div class='product_content_div'>" +
+                            //     "<div class='detail_product'>" +
+                            //     "<input type='hidden' value=" + data[i].id + " '/>" +
+                            //     "<div class='product_img_div'><img class='show_img' src='" + data[i].image + "' title=" + data.name + "'/></div>" +
+                            //     "<p class='show_tip'>"+data[i].remark+"</p>"+
+                            //     "<span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
+                            //     "<span class='detail_product_cost'>￥" + data[i].price + "</span><br/>" +
+                            //     "<span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
+                            //     "</div>" +
+                            //     "</div>"
+                            // );
                             $all_product.append("<div class='product_content_div'>" +
-                                "<div class='detail_product'>" +
-                                "<input type='hidden' value=" + data[i].id + " '/>" +
-                                "<div class='product_img_div'><img class='show_img' src='" + data[i].image + "' title=" + data.name + "'/></div>" +
-                                "<p class='show_tip'>"+data[i].remark+"</p>"+
-                                "<span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
-                                "<span class='detail_product_cost'>￥" + data[i].price + "</span><br/>" +
-                                "<span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
-                                "</div>" +
-                                "</div>");
+                                "<div class=\"detail_produc\">" +
+                                "                    <div id=\"product-list\">" +
+                                "                        <ul class=\"fall-list\">" +
+                                "                            <li>" +
+                                "                                <span class=\"p-price\">" +
+                                "                                    <span class=\"detail_product_cost\">￥" + data[i].price + "</span><br/>" +
+                                "                                </span>" +
+                                "                                <a href=\"#\" class=\"product-img\">" +
+                                "                                    <div class=\"product_img_div\">" +
+                                "                                        <img class='show_img' src='" + data[i].image + "' title=" + data.name + "/>" +
+                                "                                    </div>" +
+                                "                                </a>" +
+                                "                                <div class=\"product-box\">" +
+                                "                                    <h3>" +
+                                "                                        <span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
+                                "                                    </h3>" +
+                                "                                    <div class=\"btn-box\">" +
+                                "                                        <a href=\"#\" class=\"glyphicon glyphicon-shopping-cart\"><span>" +
+                                "                                            <span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
+                                "                                        </span></a>" +
+                                "                                    </div>" +
+                                "                                </div>" +
+                                "                            </li>" +
+                                "                        </ul>" +
+                                "                    </div>" +
+                                "                    <input type=\"hidden\" value=" + data[i].id + "/>" +
+                                "                </div>" +
+                                "                </div>"
+
+                            );
                         }
                         //进入查看商品的详情,通过id
                         $('.detail_product_name').click(function () {
@@ -193,18 +225,49 @@ $(function () {
                         "</div>");
                 }
                 for (var i = 0; i < data.length; i++) {
+                    // $all_product.append("<div class='product_content_div'>" +
+                    //     "<div class='detail_product'>" +
+                    //     "<input type='hidden' value=" + data[i].id + " '/>" +
+                    //     "<div class='product_img_div'>" +
+                    //     "<img class='show_img' src='" + data[i].image + "' title=" + data.name + "'/>" +
+                    //     "</div>" +
+                    //     "<p class='show_tip'>"+data[i].remark+"</p>"+
+                    //     "<span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
+                    //     "<span class='detail_product_cost'>￥" + data[i].price + "</span><br/>" +
+                    //     "<span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
+                    //     "</div>" +
+                    //     "</div>");
                     $all_product.append("<div class='product_content_div'>" +
-                        "<div class='detail_product'>" +
-                        "<input type='hidden' value=" + data[i].id + " '/>" +
-                        "<div class='product_img_div'>" +
-                        "<img class='show_img' src='" + data[i].image + "' title=" + data.name + "'/>" +
-                        "</div>" +
-                        "<p class='show_tip'>"+data[i].remark+"</p>"+
-                        "<span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
-                        "<span class='detail_product_cost'>￥" + data[i].price + "</span><br/>" +
-                        "<span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
-                        "</div>" +
-                        "</div>");
+                        "<div class=\"detail_produc\">" +
+                        "                    <div id=\"product-list\">" +
+                        "                        <ul class=\"fall-list\">" +
+                        "                            <li>" +
+                        "                                <span class=\"p-price\">" +
+                        "                                    <span class=\"detail_product_cost\">￥" + data[i].price + "</span><br/>" +
+                        "                                </span>" +
+                        "                                <a href=\"#\" class=\"product-img\">" +
+                        "                                    <div class=\"product_img_div\">" +
+                        "                                        <img class='show_img' src='" + data[i].image + "' title=" + data.name + "/>" +
+                        "                                    </div>" +
+                        "                                </a>" +
+                        "                                <div class=\"product-box\">" +
+                        "                                    <h3>" +
+                        "                                        <span class='detail_product_name' value='"+data[i].id+"'>" + data[i].name + "</span><br/>" +
+                        "                                    </h3>" +
+                        "                                    <div class=\"btn-box\">" +
+                        "                                        <a href=\"#\" class=\"glyphicon glyphicon-shopping-cart\"><span>" +
+                        "                                            <span class='detail_buy product_1' value='"+data[i].id+"'>加入购物车</span>" +
+                        "                                        </span></a>" +
+                        "                                    </div>" +
+                        "                                </div>" +
+                        "                            </li>" +
+                        "                        </ul>" +
+                        "                    </div>" +
+                        "                    <input type=\"hidden\" value=" + data[i].id + "/>" +
+                        "                </div>" +
+                        "                </div>"
+
+                    );
                 }
                 //进入查看商品的详情,通过id
                 $('.detail_product_name').click(function () {
