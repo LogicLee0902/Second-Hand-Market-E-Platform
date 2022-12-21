@@ -8,8 +8,7 @@ $( function() {
         if (type=="radio") {
 //                    单选按钮
             var value = $(this).siblings(".first_info").children("input").val();
-
-            alert(value);
+            alert("已修改");
         }else {
             var val = $(this).siblings(".first_info").children("input").val();
             if (val==undefined||val=='') {

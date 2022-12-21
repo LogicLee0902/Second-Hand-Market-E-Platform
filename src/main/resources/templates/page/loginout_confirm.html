@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logout_confirm</title>
+    <script type="text/javascript">
+      var logout = document.getElementById("login_out");
+      logout.onclick = function () {
+        var message = "确定要退出吗？";
+        if (confirm(message)) {
+          window.location.href = "http://localhost:8080/logout.do";
+        } else {
+          window.location.href = "http://localhost:8080/personal.do";
+        }
+      }
+    </script>
+</head>
+<body>
+  <a id="login_out" onclick="logout()">退出</a>
+</body>
+</html>

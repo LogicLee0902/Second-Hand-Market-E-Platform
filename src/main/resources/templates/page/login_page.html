@@ -25,19 +25,27 @@
         <!--登陆界面-->
         <div class="login">
             <div class="check_mark">
-                <div class="left_mark">
-                </div>
-                <div class="right_mark">
-                </div>
+<!--                <div class="left_mark">-->
+<!--                </div>-->
+<!--                <div class="right_mark">-->
+<!--                </div>-->
+                <svg class="w-6 h-6" fill="white" viewBox="-3 -1 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z" clip-rule="evenodd">
+                    </path>
+                </svg>
             </div>
             <form action="/login.do" method="post">
                 <div class="login_form">
 
                     <div class="login_username">
-                        <!--svg就很溜-->
+<!--                        svg就很溜-->
                         <svg class="login_icon" viewBox="0 0 20 20">
                             <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8"></path>
                         </svg>
+<!--                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">-->
+<!--                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">-->
+<!--                            </path>-->
+<!--                        </svg>-->
                         <input type="hidden" th:value="${token}" class="token" name="token"/>
                         <label>
                             <input type="text" placeholder="手机号码" class="input_username placeholder" name="phone"/>
@@ -131,10 +139,16 @@
         </div>
         <!--第4个页面-->
         <div class="forget_password">
-            <div class="top_icon">
-                <svg class="circle_icon">
-                    <circle cx="50%" cy="55%" r="25%" stroke="white" stroke-width="20" fill="none"/>
-                </svg>
+<!--            <div class="top_icon">-->
+<!--                <svg class="circle_icon">-->
+<!--                    <circle cx="50%" cy="55%" r="25%" stroke="white" stroke-width="20" fill="none"/>-->
+<!--                </svg>-->
+<!--            </div>-->
+            <div class="check_mark">
+                <div class="left_mark">
+                </div>
+                <div class="right_mark">
+                </div>
             </div>
             <div class="forget_get_vcode">
                 <div class="forget_phone_div">

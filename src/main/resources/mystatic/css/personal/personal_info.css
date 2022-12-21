@@ -25,11 +25,11 @@
     margin-left: 30%;
 }
 .first_info span {
-    color: slateblue;
+    color: #696969;
     font-weight: 600;
 }
 .first_info input {
-    border: 1px solid slateblue;
+    border: 1px solid #000000;
     border-radius: 5px;
     padding: 0.3em;
     font-size: 1.1em;
@@ -39,7 +39,7 @@
     width: 15%;
     height: 20%;
     border: none;
-    background-color: slateblue;
+    background-color: #007fff;
     border-radius: 5px;
     color: white;
 }
