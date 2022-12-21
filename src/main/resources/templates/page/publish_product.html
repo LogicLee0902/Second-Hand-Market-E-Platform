@@ -10,13 +10,27 @@
     <script src="/js/home/header_model_js.js"></script>
     <script src="/js/mall/type_list_obj.js"></script>
     <script src="/js/publish/publish_product.js"></script>
-</head>
+<!--    <script type="text/javascript">-->
+<!--        function checkForm(){-->
+<!--            var flag = true;-->
+<!--            var message = form1.message.value;-->
+<!--            if(message != null) {-->
+<!--                alert("message");-->
+<!--                flag = false;-->
+<!--            }-->
+<!--            return flag;-->
+<!--        }-->
+<!--    </script>-->
+<!--</head>-->
 <body>
 <header th:include="header :: copy"></header>
 <div th:include="short_nav_show :: short_nav_show" class="short_nav_show"></div>
 <nav th:include="my_nav :: my_nav" class="my_nav"></nav>
 <div th:include="personal_nav :: personal_nav" class="personal_nav"></div>
 <div style="display: none" th:if="${message}!=null" th:value="${message}" th:text="${message}" class="show_tip"></div>
+<!--<div class="popping" onload="checkForm()">-->
+<!--    <input type="hidden"  t/>-->
+<!--</div>-->
 <div class="top_content">
     <div class="publish_product_div">
         <form action="/insertGoods.do" method="post" enctype="multipart/form-data">

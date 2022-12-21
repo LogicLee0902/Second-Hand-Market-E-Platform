@@ -1,3 +1,30 @@
+<!--<script type="text/javascript">-->
+<!--    $.ajax({-->
+<!--        dataType:"json",-->
+<!--        type:"get",-->
+<!--        data:{-->
+<!--        },-->
+<!--        contentType:"application/json;charset=utf-8",-->
+<!--        success:function(resule){-->
+<!--            var jsonobj= eval(resule);-->
+<!--            var test = JSON.stringify(jsonobj)//将json对象转化成字符串-->
+<!--            if (test !== "[]") {-->
+<!--                alert(test);-->
+<!--            }-->
+<!--        },-->
+<!--        error:function(){-->
+<!--            alert("Error");-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+<!--    <script src="../mystatic/js/login_out.js"></script>-->
+</head>
+<body>
 <div class="personal_nav" th:fragment="personal_nav">
     <ul>
         <li><a href="personal_info.do">个人信息</a></li>
@@ -9,3 +36,4 @@
         <li><a class="login_out" href="/logout.do">退出</a></li>
     </ul>
 </div>
+</body>

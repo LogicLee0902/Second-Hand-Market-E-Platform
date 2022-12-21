@@ -1,5 +1,6 @@
 package com.finalProject.controller;
 
+import net.sf.json.JSONObject;
 import com.finalProject.bean.ShopContextBean;
 import com.finalProject.bean.ShopInformationBean;
 import com.finalProject.bean.UserWantBean;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -43,7 +45,7 @@ public class GoodsController {
 
     //进入到发布商品页面
     @RequestMapping(value = "/publish_product.do", method = RequestMethod.GET)
-    public String publish(HttpServletRequest request, Model model) {
+    public String publish(HttpServletRequest request, Model model, HttpServletResponse response) {
         //先判断用户有没有登录
         UserInformation userInformation = (UserInformation) request.getSession().getAttribute("userInformation");
         if (StringUtils.getInstance().isNullOrEmpty(userInformation)) {
@@ -54,12 +56,20 @@ public class GoodsController {
         }
         //如果登录了，判断该用户有没有经过认证
         try {
+            // Add a poping hint
             String realName = userInformation.getRealname();
             String sno = userInformation.getSno();
             String dormitory = userInformation.getDormitory();
             if (StringUtils.getInstance().isNullOrEmpty(realName) || StringUtils.getInstance().isNullOrEmpty(sno) || StringUtils.getInstance().isNullOrEmpty(dormitory)) {
-                //没有
-                model.addAttribute("message", "请先认证真实信息");
+                //model.addAttribute("message", "请确认姓名、学号、宿舍号均已填写");
+//                Map<Object, Object>hintInfo = new HashMap<>();
+//                hintInfo.put("错误信息", "请确认姓名、学号、宿舍号均已填写");
+//                JSONObject hint = JSONObject.fromObject(hintInfo);
+//                response.getWriter().write(hint.toString());
+                //request.setAttribute("message", "请确认姓名、学号、宿舍号均已填写");
+                response.setContentType("text/html;charset=utf-8");
+                response.getWriter().write("<script>alert('请确认姓名、学号、宿舍号均已填写');window.location.href='/personal_info.do';</script>");
+                response.getWriter().flush();
                 return "redirect:personal_info.do";
             }
         } catch (Exception e) {

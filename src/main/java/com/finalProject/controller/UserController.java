@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.math.BigDecimal;
 import java.util.*;
@@ -80,8 +81,12 @@ public class UserController {
 
     //退出
     @RequestMapping(value = "/logout.do")
-    public String logout(HttpServletRequest request) {
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
         try {
+            // return to the home page
+            response.setContentType("text/html;charset=utf-8");
+            response.getWriter().write("<script>confirm('确定退出吗？');window.location.href='/';</script>");
+            response.getWriter().flush();
             request.getSession().removeAttribute("userInformation");
             request.getSession().removeAttribute("uid");
             System.out.println("logout");
