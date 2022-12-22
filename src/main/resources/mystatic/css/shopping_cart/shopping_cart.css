@@ -28,11 +28,12 @@
     display: inline-block;
     float: left;
     line-height: 1.3em;
-    background-color: #eeeeee;
+    background-color: #ffffff;
 }
 
 .shipping_address:hover {
     cursor: pointer;
+    background-color: #eeeeee;
 }
 
 span.name_info {
@@ -78,6 +79,8 @@ table {
     width: 100%;
     padding-bottom: 3%;
 }
+
+
 .table_head{
     background-color: rgba(0,0,0,0.55);
     color: white;
@@ -90,6 +93,13 @@ table {
     margin-right: 0%;
     width: 10%;
 }
+
+
+.table_content:hover, .table_content::selection {
+    background-color: rgba(241, 237, 237, 0.25);
+    cursor: pointer;
+}
+
 
 .table_content td {
     width: 10%;
@@ -117,7 +127,7 @@ table {
     text-align: center;
 }
 .table_content td.count span.number {
-    background-color: gray;
+    background-color: white;
     padding-left: 0.5em;
     padding-right: 0.5em;
     width: 1.3em;
@@ -169,6 +179,25 @@ table {
 .all_sum {
     text-align: right;
 }
+
+span.shop-name{
+    font-weight: bold;
+    line-height: 4px;
+}
+
+span.additional-info {
+    color:gray;
+    font-size: 5px;
+}
+
+span.level-info {
+    background-color: gray;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
 footer {
     width: 96%;
     background-color: lightgrey;

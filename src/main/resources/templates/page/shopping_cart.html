@@ -32,22 +32,30 @@
     </div>
     <div class="cart_content">
         <table>
-            <tr class="table_head">
-                <th colspan="4">商品信息</th>
-                <th>商品金额</th>
-                <th>商品数量</th>
-                <th>总金额</th>
-                <th>编辑</th>
-            </tr>
+            <thead>
+                <tr class="table_head">
+                    <th colspan="4">商品信息</th>
+                    <th>商品金额</th>
+                    <th>商品数量</th>
+                    <th>总金额</th>
+                    <th>编辑</th>
+                </tr>
+            </thead>
             <tr class="table_content" th:each="o:${list}">
                 <td class="input_checkbox">
                     <input id="1" type="checkbox" checked="checked" name="checkbox" th:value="${o.sid}"/></td>
                 <td class="show_img">
                     <img src="/img/home/feature_prodects/cont1.jpg" th:src="${o.image}" th:value="${o.sid}"
                          th:title="${o.name}"/></td>
-                <td class="title" colspan="2"><span th:text="${o.name}">这是一个商品</span></td>
+                <td class="title" colspan="2"><span class="shop-name" th:text="${o.name}">这是一个商品</span>
+                    <br>
+                    <span class="additional-info">成色</span>
+                    <br>
+                    <span class="level-info" th:text="${o.level}+'成'">8成</span>
+                </td>
                 <td class="cost">￥<span th:text="${o.price}">20.00</span></td>
-                <td class="count"><span class="minus">-</span><span class="number" th:text="${o.quantity}">2</span><span class="add">+</span>
+                <td class="count"><span class="minus">-</span><span class="number" th:text="${o.quantity}">2</span><span
+                        class="add">+</span>
                 </td>
                 <td class="per_sum">￥<span th:with="sum=${o.price}*${o.quantity}" th:text="${sum}">40.00</span></td>
                 <td class="delete_img"><img src="/img/delete_icon.jpg" th:value="${o.id}" class="deleteShopCar"/></td>

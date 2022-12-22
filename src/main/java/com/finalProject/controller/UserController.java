@@ -492,6 +492,7 @@ public class UserController {
             goodsCarBean.setImage(shopInformation.getImage());
             goodsCarBean.setPrice(shopInformation.getPrice().doubleValue());
             goodsCarBean.setSort(getSort(shopInformation.getSort()));
+            goodsCarBean.setLevel((shopInformation.getLevel()));
             goodsCarBeans.add(goodsCarBean);
         }
         model.addAttribute("list", goodsCarBeans);
