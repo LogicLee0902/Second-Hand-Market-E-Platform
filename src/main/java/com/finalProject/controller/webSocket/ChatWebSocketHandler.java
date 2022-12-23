@@ -25,10 +25,10 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
 //            super.handleTextMessage(session, message);
 //            System.out.println(session.getId()+" :"+message.getPayload() + "   " + new Date());
             String m = message.getPayload();
-            String[] wsk = m.split(",");
-            String phone = wsk[0];
-            long time = Long.parseLong(wsk[1]);
-            String action = wsk[2];
+            String[] strings = m.split(",");
+            String phone = strings[0];
+            long time = Long.parseLong(strings[1]);
+            String action = strings[2];
             if (action.equals("start")){
                 session.sendMessage(new TextMessage("success"));
                 SaveSession.getInstance().save(phone,time);

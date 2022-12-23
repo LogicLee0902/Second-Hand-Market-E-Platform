@@ -448,7 +448,7 @@ INSERT INTO `shopinformation`
 VALUES ('2', '2022-12-10 15:30:36', '算法导论', '9', '计算机人不得不读的一本书', '70.00', '86', '1', '1', '1', '2', '1',
         '/images/goods/algorithm.jpg', '/images/thumbnails/IrFMeAQeua1496368854318.jpg');
 INSERT INTO `shopinformation`
-VALUES ('3', '2022-12-10 15:31:26', '爱我的人', '3', '来自wsk的爱', '12.00', '3', '1', '3', '1', '0', '4',
+VALUES ('3', '2022-12-10 15:31:26', '爱我的人', '3', '爱', '12.00', '3', '1', '3', '1', '0', '4',
         '/images/goods/default.jpg', '/images/thumbnails/IrFMeAQeua1496368854318.jpg');
 INSERT INTO `shopinformation`
 VALUES ('4', '2022-12-10 15:33:27', '729乒乓球拍', '5', '卖家自用闲置品，成色很好，物美价廉，如要小刀请联系咪西迪西',

@@ -59,7 +59,7 @@ public class SendEmailController {
         //get the random num to phone which should check the phone to judge the phone is belong user
         getRandomForCodePhone(req);
         String ra = (String) req.getSession().getAttribute("codePhone");
-        String text1 = "【WSK的验证码】您的验证码是：";
+        String text1 = "【验证码】您的验证码是：";
         String text2 = "，请保护好自己的验证码。";
         String text = text1 + ra + text2;
         Properties prop = new Properties();

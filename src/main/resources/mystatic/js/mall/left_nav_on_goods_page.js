@@ -46,13 +46,13 @@ $(function () {
             $('.particular_type_div').html(my_string);
             //  点击事件
             $('.type_goods_list a.shop_sort').click(function () {
-                var wsk = $(this).attr('id');
+                var attr = $(this).attr('id');
                 var $all_product = $('.all_product');
                 $.ajax({
                     url: 'selectBySort.do',
                     type: 'post',
                     dataType: 'JSON',
-                    data: {sort: wsk},
+                    data: {sort: attr},
                     success: function (data) {
                         $all_product.html('');
                         if (data.length === 0) {
@@ -118,7 +118,7 @@ $(function () {
                         insertShopCar();
                     }
                 });
-                // alert(wsk);
+                // alert(attr);
 
             })
         }

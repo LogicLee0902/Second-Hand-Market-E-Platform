@@ -26,6 +26,7 @@
                 <div class="detail">
                     <h3>
                         <span class="glyphicon glyphicon-list-alt"></span>
+                        <input type="hidden" th:value="${shopInformation.id}" class="id"/>
                         <span class="info_content" th:text="${shopInformation.name}"></span><br/>
                     </h3>
                     <div class="p-body">
@@ -83,8 +84,8 @@
             <div class="one_comment" th:each="o:${shopContextBeans}">
                 <span class="username" th:text="'用户：'+${o.username}">用户：1211110</span>
                 <span class="time" th:with="time = ${o.modified}"
-                      th:text="'发表于 '+${#dates.format(time,'yyyy-MM-dd HH:mm:ss')}">发表于：2016-03-01 22:22:22</span>
-                <p class="content" th:text="${o.context}">123456789123</p>
+                      th:text="'发表于 '+${#dates.format(time,'yyyy-MM-dd HH:mm:ss')}">发表于：2016-03-01 22:22:22</span><br>
+                <span class="content" th:text="${o.context}">123456789123</span>
             </div>
         </div>
     </div>

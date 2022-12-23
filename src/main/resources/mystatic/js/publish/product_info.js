@@ -27,7 +27,7 @@ $(function () {
                     var name = data.username;
                     var time = data.time;
                     var context = data.context;
-                    var cc = "<div class='one_comment'><span class='username'>用户："+name+"</span><span class='time'>发表于："+time+"</span><p class='content'>"+context+"</p></div>";
+                    var cc = "<br><div class='one_comment'><span class='username'>用户："+name+"</span><span class='time'>发表于："+time+"</span><span class='content'>"+context+"</span></div>";
                     $comment.append(cc);
                 }
             }

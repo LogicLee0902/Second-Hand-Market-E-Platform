@@ -7,11 +7,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-/**
- * @author sk
- * @date 2022/5/1
- * @description 描述
- */
 @SpringBootApplication
 @EntityScan(basePackages = "com.finalProject.*")
 @ComponentScan({"com.finalProject.*"})

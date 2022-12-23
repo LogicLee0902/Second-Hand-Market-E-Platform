@@ -4,11 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * @author sk
- * @date 2022/5/1
- * @description 描述
- */
 @Configuration
 public class MyWebAppConfigurer implements WebMvcConfigurer {
 

@@ -608,9 +608,9 @@ public class UserController {
             StringBuilder thumbnails = new StringBuilder();
             thumbnails.append(path);
             thumbnails.append("toImage/thumbnails/");
-            StringBuilder wsk = new StringBuilder();
-            wsk.append(StringUtils.getInstance().getRandomChar()).append(System.currentTimeMillis()).append(".jpg");
-            thumbnails.append(wsk);
+            StringBuilder sbb = new StringBuilder();
+            sbb.append(StringUtils.getInstance().getRandomChar()).append(System.currentTimeMillis()).append(".jpg");
+            thumbnails.append(sbb);
 //        String fileName = "\\" + random + ".jpg";
             File file = new File(path, random);
             if (!file.exists()) {
@@ -636,7 +636,7 @@ public class UserController {
 ////                thumbnailsFile.mkdir();
 //            }
             if (StringUtils.getInstance().thumbnails(path + random, thumbnails.toString())) {
-                save = "/toImage/thumbnails/" + wsk;
+                save = "/toImage/thumbnails/" + sbb;
             } else {
                 return "redirect:publish_product.do?error=生成缩略图失败";
             }

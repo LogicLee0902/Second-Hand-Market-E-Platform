@@ -408,14 +408,15 @@ footer p {
 }
 .content{
     width: 423px;
-    height: 498px;
-    background: #fff;
-    position: absolute;
+    height: 100px;
+    background: #cbe8f8;
+    position: relative;
     left:50%;
-    /*top:50%;*/
-    top:-249px;
-    margin-left: -212px;
+    top:70%;
+    /*top:-249px;*/
+    margin-left: -450px;
     margin-top: -249px;
+    overflow: scroll;
 }
 
 @keyframes show{
