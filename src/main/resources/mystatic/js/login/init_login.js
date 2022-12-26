@@ -81,7 +81,7 @@ $(function () {
                 success: function (data) {
                     var result = data.result;
                     if (result === 1) {
-                        window.location.href = '../../../../home.do';
+                        window.location.href = '../../../../login.do';
                     } else if (result === 0) {
                         alert('发送了错误，0但是我不说');
                     } else {

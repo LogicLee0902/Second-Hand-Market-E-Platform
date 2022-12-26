@@ -60,8 +60,8 @@
                 #{sort,jdbcType=INTEGER},
                 #{quantity,jdbcType=INTEGER},
                 #{price,jdbcType=DECIMAL},
-                #{remark,jdbcType=VARCHAR}),
-               #{uid,jdbcType=INTEGER}
+                #{remark,jdbcType=VARCHAR},
+               #{uid,jdbcType=INTEGER})
     </insert>
     <insert id="insertSelective" parameterType="com.finalProject.pojo.UserWant">
         insert into userwant

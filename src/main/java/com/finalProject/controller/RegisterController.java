@@ -75,6 +75,7 @@ public class RegisterController {
                 return BaseResponse.success();
             }
         }
+        request.getSession().setAttribute("uid", uid);
         return BaseResponse.fail();
     }
 }
